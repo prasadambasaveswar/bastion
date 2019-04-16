@@ -9,8 +9,8 @@ pipeline {
     hostname
     ls -lrth
     export bastiondevip=`echo $bastiondevip`
-    scp -r -o StrictHostKeyChecking=no dev.sh satya@${bastiondevip}:/home/satya/
-    ssh -o StrictHostKeyChecking=no satya@${bastiondevip} <<EOF
+    scp -r -o StrictHostKeyChecking=no dev.sh root@${bastiondevip}:/home/satya/
+    ssh -o StrictHostKeyChecking=no root@${bastiondevip} <<EOF
     hostname
     pwd
     ls -lrth
